@@ -1,24 +1,12 @@
 
-const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container);
-
+const cont = document.getElementById('root');
+const root = ReactDOM.createRoot(cont);
 function App() {
     return (
-        <div> root root block
-            <header>
-                <nav>nav block</nav>
-            </header>
-            <main>
-                main block
-                <aside class="left-side">left    side</aside>
-                <div class="main-div">main div</div>
-                <aside class="right-side">right side</aside>
-            </main>
-            <footer> footer
-            </footer>
-        </div>
+        <h1>
+            Hello from start.js
+        </h1>
     );
 }
-
 root.render(<App />);
 
