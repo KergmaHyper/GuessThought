@@ -1,3 +1,3 @@
-const React = require("react");
+import React from "react";
 function Header(props) { return <h2>{props.text}</h2>; }
-module.exports = Header;
+export default Header;

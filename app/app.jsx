@@ -1,9 +1,9 @@
-const React = require("react");
-const ReactDOM = require("react-dom/client");
-const Header = require("./components/header");
-const Article = require("./components/article");
+import React from "react";
+import * as ReactDOM from 'react-dom/client';
+import Header from "./components/header.jsx";
+import Article from "./components/article.jsx";
 
-const header = "HEAD ARTICLE";
+const header = "HEAD ARTICLE Client";
 const article = "После одного из заседаний N-ского мирового съезда судьи собрались в совещательной комнате, чтобы снять свои мундиры, минутку отдохнуть и ехать домой обедать.";
 
 const appElem = document.getElementById("app");
@@ -14,4 +14,4 @@ appRoot.render(
         <Header text={header} />
         <Article content={article} />
     </div>
-)
+);
