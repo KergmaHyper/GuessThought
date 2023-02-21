@@ -2,50 +2,56 @@
 
 const cont = document.getElementById('root');
 const root = ReactDOM.createRoot(cont);
-function table(a, b, c) {
-    return (
-        <table >
-
-        </table>
-    );
-}
-
-function App() {
-    return (
-        <div id="subroot">
-            <header id="header">
-
-                <nav id="nav"></nav>
-                <h2>
-                    {new Date().toLocaleTimeString()}
-                </h2>
-            </header>
-            <main id="main">
-                <aside className="left-side"></aside>
-                <div id="maindiv">
-                </div>
-                <aside className="right-side"></aside>
-            </main>
-            <footer id="footer">
-
-            </footer>
-        </div>
-    );
-}
-
-root.render(<App />);
-
 
 const headerEl = document.getElementById("header");
-function setHeader() {
+const headerR = ReactDOM.createRoot(headerEl);
 
-    headerEl.render(
-        <div>
-            <h2>
-                {new Date().toLocaleTimeString()}
-            </h2>
-        </div>
-    )
+class Hello extends React.Component {
+    render() {
+        return <sup>
+            Hello first Name: '{this.props.name}'  second Name: '{this.props.secName}'
+        </sup>
+    }
 }
 
-setHeader();
+class App extends React.Component {
+    render() {
+        return (
+            <sup>
+                {new Date().toLocaleTimeString()}
+            </sup>
+        )
+    }
+}
+
+class HeaderSet extends React.Component {
+    render() {
+        return (
+            <div>
+                <h2><App /></h2>
+            </div>
+        )
+    }
+}
+
+class BodySet extends React.Component {
+    render() {
+        return (
+            <div>
+                <p><App /> <Hello name="Alex" secName="Fich" /></p>
+                <p><App /> <Hello name="Bob" secName="Brown" /></p>
+                <p><App /> <Hello name="Charly" secName="Smit" /></p>
+            </div>
+        )
+    }
+}
+
+
+root.render(<BodySet />);
+
+function buildHead() {
+    headerR.render(<HeaderSet />);
+}
+
+setInterval(buildHead, 1000);
+
