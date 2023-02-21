@@ -1,14 +1,14 @@
-const http = require("http");
-const fs = require("fs");
+import { createServer } from "http";
+import { readFile } from "fs";
 
-http.createServer(function (request, response) {
+createServer(function (request, response) {
 
     let filePath = "index.html";
     if (request.url !== "/") {
         // получаем путь после слеша
         filePath = request.url.substring(1);
     }
-    fs.readFile(filePath, function (error, data) {
+    readFile(filePath, function (error, data) {
 
         if (error) {
 

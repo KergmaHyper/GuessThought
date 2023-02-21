@@ -1,51 +1,33 @@
-//import React from "react";
-//import table from "./table";
 
 
 const cont = document.getElementById('root');
 const root = ReactDOM.createRoot(cont);
 function table(a, b, c) {
     return (
-        <table>
-            <tr>
-                <td>{a}</td>
-                <td>{b}</td>
-                <td>{c}</td>
-            </tr>
-            <tr>
-                <td>{a + 1}</td>
-                <td>{b + 1}</td>
-                <td>{c + 1}</td>
-            </tr>
-            <tr>
-                <td>{a + 2}</td>
-                <td>{b + 2}</td>
-                <td>{c + 2}</td>
-            </tr>
+        <table >
+
         </table>
     );
 }
 
 function App() {
     return (
-        <div>
-            <header>
-                <nav></nav>
+        <div id="subroot">
+            <header id="header">
+                <nav id="nav"></nav>
             </header>
-            <main>
+            <main id="main">
                 <aside className="left-side"></aside>
-                <div className="main-div">
-                    {
-                        table(1, 2, 3)
-                    }
+                <div id="maindiv">
                 </div>
                 <aside className="right-side"></aside>
             </main>
-            <footer>
+            <footer id="footer">
 
             </footer>
         </div>
     );
 }
+
 root.render(<App />);
 
