@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background: #308030;
 }
@@ -6,26 +11,34 @@ header {
     background: #10a030;
     width: 100%;
     height: 40px;
+    position: fixed;
+    right: 0;
+    top: 0;
 }
 
 footer {
     background: #308010;
-    width: 100%;
     height: 40px;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
 }
 
 main {
-    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: calc(80px + 3em);
 }
 
-aside {
-    background: #303080;
-    width: 5%;
-    height: auto;
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        background: #505000;
+    }
 }
 
-.main-div {
-    height: 400px;
-    width: 90%;
-    background: #803080;
+@media (min-width: 769px) {
+    body {
+        background: #505050;
+    }
 }
