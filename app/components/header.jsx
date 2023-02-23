@@ -9,7 +9,7 @@ class Header extends React.Component {
     render() {
         return (
             <div>
-                <Nav call={this.props.call} />
+                <Nav call={this.props.call} lang={this.props.lang} />
                 <GetTime />
             </div>
         );

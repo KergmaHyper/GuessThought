@@ -1,15 +1,17 @@
 import React from "react";
-import SetPage from "./SetPage.jsx";
+import { Langs } from "./langs";
+
 class Nav extends React.Component {
+    lang = {};
     constructor(props) {
         super(props);
         this.butStart = this.butStart.bind(this);
         this.butTable = this.butTable.bind(this);
         this.butAbout = this.butAbout.bind(this);
-
+        this.butLang = this.butLang.bind(this);
 
         this.state = { thisSetPage: this.props.call };
-
+        this.lang = Langs.getLang(this.props.lang);
         console.log("Call from SetPage");
         console.log(this.props.call);
     }
@@ -25,12 +27,22 @@ class Nav extends React.Component {
         console.log("press but ABOUT state.");
         this.state.thisSetPage.setStateABOUT();
     }
+    butLang() {
+        this.state.thisSetPage.swLang();
+    }
+
     render() {
+        this.lang = Langs.getLang(this.props.lang);
         return (
             <div>
-                <button onClick={this.butStart}>state START</button>
-                <button onClick={this.butTable}>state TABLE</button>
-                <button onClick={this.butAbout}>state ABOUT</button>
+                <div>
+                    <button onClick={this.butStart}> {this.lang.capButStart} </button>
+                    <button onClick={this.butTable}>{this.lang.capButTable}</button>
+                    <button onClick={this.butAbout}>{this.lang.capButAbout}</button>
+                </div>
+                <div>
+                    <button onClick={this.butLang}>{this.props.lang === "ukr" ? "ENG" : "UKR"}</button>
+                </div>
             </div>
         );
     }

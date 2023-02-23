@@ -1,10 +1,14 @@
 import React from "react";
 import Article from "./article.jsx";
+import { Langs } from "./langs.js";
+
 class About extends React.Component {
+    lang = {}
     render() {
+        this.lang = Langs.getLang(this.props.lang);
         return (
             <h1>
-                <Article content="This is ABOUT PAGE of site. More info wait plese" />
+                <Article content={this.lang.msgAboutPage} />
             </h1>
         );
     }

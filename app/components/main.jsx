@@ -1,20 +1,22 @@
 import React from "react";
-import Article from "./article.jsx";
 import Start from "./start.jsx";
 import Table from "./table.jsx";
 import About from "./about.jsx";
+import { Langs } from "./langs.js";
 
 class Main extends React.Component {
+    lang = {}
+    constructor(props) {
+        super(props);
+    }
+
     render() {
+
         return (
             <div>
-                {/* <Article content="There is call Article from Main.jsx" /> */}
-                {/* <h2>  <Article content={this.props.state} /> </h2> */}
-                {this.props.state === "start" && <Start />}
-                {this.props.state === "table" && <Table />}
-                {this.props.state === "about" && <About />}
-
-
+                {this.props.state === "start" && <Start lang={this.props.lang} />}
+                {this.props.state === "table" && <Table lang={this.props.lang} />}
+                {this.props.state === "about" && <About lang={this.props.lang} />}
             </div>
         );
     }

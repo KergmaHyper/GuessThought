@@ -6,5 +6,5 @@ import SetPage from "./components/SetPage.jsx";
 const appElem = document.getElementById("app");
 const appRoot = ReactDOM.createRoot(appElem);
 
-function renderApp() { appRoot.render(<SetPage screen="start" />); };
+function renderApp() { appRoot.render(<SetPage screen="start" lang="ukr" />); };
 renderApp();

@@ -1,10 +1,14 @@
 import React from "react";
 import Article from "./article.jsx";
+import { Langs } from "./langs.js";
+
 class Start extends React.Component {
+    lang = {}
     render() {
+        this.lang = Langs.getLang(this.props.lang);
         return (
             <h1>
-                <Article content="This is START PAGE of site." />
+                <Article content={this.lang.msgMainPage} />
             </h1>
         );
     }

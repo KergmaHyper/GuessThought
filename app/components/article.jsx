@@ -1,3 +1,3 @@
-const React = require("react");
+import React from "react";
 function Article(props) { return <div>{props.content}</div>; }
-module.exports = Article;
+export default Article;

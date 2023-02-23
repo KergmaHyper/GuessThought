@@ -6,6 +6,10 @@ class Footer extends React.Component {
         return (
             <div>
                 This Footer site.
+                <h2> {(this.props.lang === "ukr") ?
+                    "Поточна мова: " :
+                    "Current language is: "}
+                    {this.props.lang} </h2>
             </div>
         );
     }
