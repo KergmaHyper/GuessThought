@@ -9,11 +9,8 @@ class Nav extends React.Component {
         this.butTable = this.butTable.bind(this);
         this.butAbout = this.butAbout.bind(this);
         this.butLang = this.butLang.bind(this);
-
         this.state = { thisSetPage: this.props.call };
         this.lang = Langs.getLang(this.props.lang);
-        console.log("Call from SetPage");
-        console.log(this.props.call);
     }
     butStart() {
         console.log("press but START state.");
@@ -39,8 +36,6 @@ class Nav extends React.Component {
                     <button onClick={this.butStart}> {this.lang.capButStart} </button>
                     <button onClick={this.butTable}>{this.lang.capButTable}</button>
                     <button onClick={this.butAbout}>{this.lang.capButAbout}</button>
-                </div>
-                <div>
                     <button onClick={this.butLang}>{this.props.lang === "ukr" ? "ENG" : "UKR"}</button>
                 </div>
             </div>
