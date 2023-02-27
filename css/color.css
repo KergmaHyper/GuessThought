@@ -1,0 +1,20 @@
+.border-red {
+    /* border: 2px solid red; */
+    color: red;
+}
+
+.border-green {
+    /* border: 2px solid green; */
+}
+
+.border-red:focus {
+    border: 3px solid red;
+    color: red;
+    outline: none;
+}
+
+.border-green:focus {
+    color: green;
+    border: 3px solid green;
+    outline: none;
+}
