@@ -12,7 +12,16 @@ class Button extends React.Component {
         this.decCount = this.decCount.bind(this);
         this.changeDif = this.changeDif.bind(this);
     }
-
+    componentDidMount() {
+        console.log("componentDidMount");
+    }
+    componentDidUpdate() {
+        console.log("componentDidUpdate");
+        this.logState();
+    }
+    componentWillUnmount() {
+        console.log("componentWillUnmout")
+    }
     incCount(prevState, props) {
         return { counter: prevState.counter + prevState.dif };
     }
@@ -23,11 +32,12 @@ class Button extends React.Component {
         this.setState(this.incCount, this.logState);
     }
     pressDecButton() {
-        this.setState(this.decCount, this.logState);
+        this.setState(this.decCount);
     }
     changeDif(event) {
 
         this.setState({ dif: parseInt(event.target.value) }, this.logState);
+
     }
     logState() { console.log(this.state); };
     render() {
@@ -37,8 +47,10 @@ class Button extends React.Component {
                     Counter: <input type="number" value={this.state.counter} />
                     Increment: <input type="number" value={this.state.dif} onChange={this.changeDif} />
                 </b></div>
-                <button onClick={this.pressDecButton}>-- counter</button>
-                <button onClick={this.pressIncButton}>++ counter</button>
+                <button onClick={() => { this.setState({ counter: 0, dif: 0 }) }}>reset</button>
+                <button onClick={this.pressDecButton}>--</button>
+                <button onClick={() => this.setState((prSt) => ({ counter: prSt.counter + prSt.dif })
+                )}>++</button>
             </div>
         );
     }
