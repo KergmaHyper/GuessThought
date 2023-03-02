@@ -1,8 +1,8 @@
 import React from "react";
 import { Container } from "flux/utils";
 import PhoneStore from "../data/PhoneStore";
-import ActionTypes from "../data/ActionTypes";
-import AppView from "../views/AppView"
+import AppViews from "../views/AppViews"
+import Actions from "../data/Actions";
 
 class AppContainer extends React.Component {
     static getStores() {
@@ -11,15 +11,15 @@ class AppContainer extends React.Component {
     static calculateState() {
         return {
             phohes: PhoneStore.getState(),
-            onAddItem: ActionTypes.ADD_ITEM,
-            onRemoveItem: ActionTypes.REMOVE_ITEM
+            onAddItem: Actions.addItem,
+            onRemoveItem: Actions.removeItem
         }
     }
     render() {
         return (
-            <AppView phones={this.state.phohes}
-                onAddItem={onAddItem}
-                onRemoveItem={onRemoveItem}
+            <AppViews phones={this.state.phohes}
+                onAddItem={this.state.onAddItem}
+                onRemoveItem={this.state.onRemoveItem}
             />
         )
     }

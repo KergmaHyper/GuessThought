@@ -2,7 +2,7 @@
     "name": "fluxapp",
     "description": "A React.js project using Flux",
     "version": "1.0.0",
-    "author": "metanit.com",
+    "author": "kergma",
     "scripts": {
         "dev": "webpack serve",
         "build": "webpack"
