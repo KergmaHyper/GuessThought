@@ -9,7 +9,10 @@ function Navs(props) {
     return (
         <div className="flex between">
             <div>
-                <NavLink to="/" className="link">Головна сторінка</NavLink>
+                <NavLink to="/" className="link">Головна</NavLink>
+            </div>
+            <div>
+                <NavLink to="/application" className="link">Додаток</NavLink>
             </div>
             <div>
                 <NavLink to="/about" className="link">About</NavLink>

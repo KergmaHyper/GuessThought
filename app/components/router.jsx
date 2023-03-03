@@ -5,6 +5,7 @@ import { Routes } from "react-router-dom";
 import SetPage from "./SetPage.jsx";
 import Navs from "./Navs.jsx";
 import About from "./about.jsx";
+import Present from "./Present.jsx";
 
 function RouterApp(props) {
 
@@ -13,8 +14,9 @@ function RouterApp(props) {
             <div>
 
                 <Routes>
-                    <Route path="/" element={<SetPage />} />
+                    <Route path="/" element={<Present />} />
                     <Route path="/about" element={<About />} />
+                    <Route path="/application" element={<SetPage />} />
                 </Routes>
                 <Navs />
             </div>
