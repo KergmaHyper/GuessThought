@@ -28,7 +28,7 @@ class SetPage extends Component {
                     <Main onClick={this.swTable} state={this.state.table} symbol={this.symbols[this.state.symbol]} />
                     <div className="table-place">
                         {(this.state.table) ?
-                            <GenTable symbol={this.state.symbol} symbols={this.symbols} /> :
+                            <GenTable symbol={this.state.symbol} symbols={this.symbols} random={this.random} /> :
                             <TryAgain onClick={this.swTable} symbol={this.state.symbol} symbols={this.symbols} />}
                     </div>
                 </main>
