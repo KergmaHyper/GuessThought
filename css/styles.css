@@ -37,6 +37,16 @@ main {
     height: 400px;
 }
 
+.no-marker {
+    list-style-type: none;
+}
+
+.list1 {
+    font-style: oblique;
+    color: yellow;
+    font-size: 1.2em;
+}
+
 @media (min-width: 481px) and (max-width: 768px) {
     body {
         background: #505000;
