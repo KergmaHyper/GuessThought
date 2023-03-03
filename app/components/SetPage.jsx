@@ -9,7 +9,7 @@ class SetPage extends Component {
         super(props);
         this.state = { table: true, symbol: this.random(10) };
         this.swTable = this.swTable.bind(this);
-        this.symbols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+        this.symbols = ["©", "⌂", "Ꚛ", "#", "ჰ", "∆", "ჵ", "Წ", "Ѧ", "Ѱ"];
     }
     random(max) {
         return Math.floor(Math.random() * max);
