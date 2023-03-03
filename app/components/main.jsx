@@ -3,9 +3,10 @@ import Start from "./start.jsx";
 import Table from "./table.jsx";
 import About from "./about.jsx";
 import { Langs } from "./langs.js";
+import Article from "./article.jsx";
+import "../../css/mainpage.css"
 
 class Main extends React.Component {
-    lang = {}
     constructor(props) {
         super(props);
     }
@@ -13,10 +14,15 @@ class Main extends React.Component {
     render() {
 
         return (
-            <div>
-                {this.props.state === "start" && <Start lang={this.props.lang} />}
-                {this.props.state === "table" && <Table lang={this.props.lang} />}
-                {this.props.state === "about" && <About lang={this.props.lang} />}
+            <div className="mainpage">
+                <Article content="Ця сторінка може вгадувати ваші думки" />
+                <Article content="Ще декілка строчок пояснень" />
+                <Article content="Ще декілка строчок пояснень" />
+                <Article content="Ще декілка строчок пояснень" />
+                <Article content="Ще декілка строчок пояснень" />
+                <button onClick={(this.props.state) ? this.props.onClick : null}>
+                    {(this.props.state) ? "Натисни" : this.props.symbol}
+                </button>
             </div>
         );
     }

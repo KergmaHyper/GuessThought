@@ -5,10 +5,9 @@ import { Langs } from "./langs.js";
 class About extends React.Component {
     lang = {}
     render() {
-        this.lang = Langs.getLang(this.props.lang);
         return (
             <h1>
-                <Article content={this.lang.msgAboutPage} />
+                <Article content="About Page" />
             </h1>
         );
     }
