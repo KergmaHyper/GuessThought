@@ -1,10 +1,15 @@
 import React from "react";
 
+
 function TryAgain(props) {
     return (
-        <div>
-            <h2>Try Aggain Page</h2>
-            <button onClick={props.onClick}> TryAgain </button>
+        <div className="flex column mainpage">
+            <div className="flex center">
+                <h3>Ви запам'ятали символ:</h3>
+            </div>
+            <div className="flex center symbol-answer">
+                {props.symbols[props.symbol]}
+            </div>
         </div>
     )
 }

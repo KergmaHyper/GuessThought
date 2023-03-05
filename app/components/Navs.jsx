@@ -8,11 +8,8 @@ import Clock from "./Clock.jsx";
 function Navs(props) {
     return (
         <div className="flex between">
-            <div>
-                <NavLink to="/" className="link">Головна</NavLink>
-            </div>
-            <div>
-                <NavLink to="/application" className="link">Додаток</NavLink>
+            <div className="flex center">
+                <NavLink to="/" className="link">Додаток</NavLink>
             </div>
             <div>
                 <NavLink to="/about" className="link">About</NavLink>
@@ -21,5 +18,11 @@ function Navs(props) {
         </div>
     );
 }
+
+
+{/* <div>
+                <NavLink to="/present" className="link">Presetation</NavLink>
+            </div> */}
+
 
 export default Navs;

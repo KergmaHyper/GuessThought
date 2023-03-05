@@ -1,0 +1,10 @@
+.button-symb {
+    width: 300px;
+    height: 40px;
+    background-color: darkgreen;
+    color: yellow;
+}
+
+.un-visible {
+    visibility: hidden;
+}

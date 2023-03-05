@@ -16,8 +16,9 @@ class SetPage extends Component {
     }
     swTable() {
         this.setState((prState) => {
-            if (!prState.table) this.setState({ symbol: this.random(10) })
-            return { table: !prState.table }
+            return prState.table
+                ? { table: !prState.table }
+                : { symbol: this.random(10), table: !prState.table };
         })
     }
 
@@ -25,11 +26,18 @@ class SetPage extends Component {
         return (
             <div>
                 <main>
-                    <Main onClick={this.swTable} state={this.state.table} symbol={this.symbols[this.state.symbol]} />
+                    <Main onClick={this.swTable}
+                        state={this.state.table}
+                        symbol={this.symbols[this.state.symbol]} />
                     <div className="table-place">
                         {(this.state.table) ?
-                            <GenTable symbol={this.state.symbol} symbols={this.symbols} random={this.random} /> :
-                            <TryAgain onClick={this.swTable} symbol={this.state.symbol} symbols={this.symbols} />}
+                            <GenTable symbol={this.state.symbol}
+                                symbols={this.symbols}
+                                random={this.random}
+                            /> :
+                            <TryAgain
+                                symbol={this.state.symbol}
+                                symbols={this.symbols} />}
                     </div>
                 </main>
             </div>

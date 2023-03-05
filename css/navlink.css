@@ -2,9 +2,11 @@
     display: inline-block;
     color: yellow;
     width: 100px;
+    height: fit-content;
     background-color: darkgreen;
     border-radius: 10px;
     font-size: 1.1em;
+
 }
 
 .link:hover {

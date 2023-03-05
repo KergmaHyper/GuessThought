@@ -14,9 +14,9 @@ function RouterApp(props) {
             <div>
 
                 <Routes>
-                    <Route path="/" element={<Present />} />
+                    <Route path="/" element={<SetPage />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/application" element={<SetPage />} />
+                    <Route path="/present" element={<Present />} />
                 </Routes>
                 <Navs />
             </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import Article from "./article.jsx";
-import { Langs } from "./langs.js";
 
 class About extends React.Component {
     lang = {}

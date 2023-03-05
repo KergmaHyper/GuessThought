@@ -1,9 +1,6 @@
 import React from "react";
-import Start from "./start.jsx";
-import Table from "./table.jsx";
-import About from "./about.jsx";
-import { Langs } from "./langs.js";
 import Article from "./article.jsx";
+import Button from "./Button.jsx";
 import "../../css/mainpage.css"
 
 class Main extends React.Component {
@@ -14,15 +11,23 @@ class Main extends React.Component {
     render() {
 
         return (
-            <div className="mainpage">
-                <Article content="Ця сторінка може вгадувати ваші думки" />
-                <Article content="Ще декілка строчок пояснень" />
-                <Article content="Ще декілка строчок пояснень" />
-                <Article content="Ще декілка строчок пояснень" />
-                <Article content="Ще декілка строчок пояснень" />
-                <button onClick={(this.props.state) ? this.props.onClick : null}>
-                    {(this.props.state) ? "Натисни" : this.props.symbol}
-                </button>
+            <div className="mainpage flex center" >
+                <div>
+                    <Article content="Ця сторінка вгадує думки!" />
+                    <Article content="-Загадайте двузначне число. (напрриклад 68)" />
+                    <Article content="-Відніміть від нього цифри які його складають. (68 - 6 - 8 = 54)" />
+                    <Article content="-Знайдить це число у таблиці, та запам'ятатйте символ поруч з ним." />
+                    <Article content="-Намалюйте цей символ у думках, та натисніть квадрат унизу." />
+                    <div className="flex center">
+                        <Button
+                            state={this.props.state}
+                            symbol={this.props.symbol}
+                            onClick={this.props.onClick}
+                            trueCaption="  Натисни  "
+                            falseCaption=" Повторити "
+                        />
+                    </div>
+                </div>
             </div>
         );
     }

@@ -4,7 +4,8 @@
 }
 
 body {
-    background: #308030;
+    /* background: #308030; */
+    background-color: darkslategrey;
 }
 
 header {
@@ -47,9 +48,14 @@ main {
     font-size: 1.2em;
 }
 
+.symbol-answer {
+    font-size: 300px;
+}
+
 @media (min-width: 481px) and (max-width: 768px) {
     body {
-        background: #505000;
+        /* background: #505000; */
+        background-color: darkslategrey;
     }
 
     main {
@@ -59,7 +65,8 @@ main {
 
 @media (min-width: 769px) {
     body {
-        background: #505050;
+        /* background: #505050; */
+        background-color: darkslategrey;
     }
 
     main {
