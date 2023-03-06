@@ -1,10 +1,11 @@
 .button-symb {
-    width: 300px;
-    height: 40px;
-    background-color: darkgreen;
-    color: yellow;
-}
+    width: 390px;
+    margin: 5px;
+    height: 30px;
+    background-color: #2f5f5f;
+    border: 1px solid lightsalmon;
+    border-radius: 20px;
+    color: lightsalmon;
+    font-size: 1em;
 
-.un-visible {
-    visibility: hidden;
 }

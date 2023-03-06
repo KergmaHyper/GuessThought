@@ -1,0 +1,8 @@
+.link-style a {
+    color: aliceblue;
+
+}
+
+.link-style a:hover {
+    color: aquamarine;
+}

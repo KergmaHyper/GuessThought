@@ -7,14 +7,17 @@ import Clock from "./Clock.jsx";
 
 function Navs(props) {
     return (
-        <div className="flex between">
-            <div className="flex center">
-                <NavLink to="/" className="link">Додаток</NavLink>
+        <div className="flex center">
+            <div className="flex link-container between">
+                <div>
+                    <NavLink to="/" className="link">Головна</NavLink>
+                    <NavLink to="/about" className="link">About</NavLink>
+                </div>
+
+                <div className="clock">
+                    <Clock />
+                </div>
             </div>
-            <div>
-                <NavLink to="/about" className="link">About</NavLink>
-            </div>
-            <div><Clock /></div>
         </div>
     );
 }

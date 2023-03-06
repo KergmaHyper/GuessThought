@@ -4,16 +4,19 @@ import "../../css/styles.css";
 import GenTable from "./genTable.jsx";
 import TryAgain from "./tryAgain.jsx";
 
+
 class SetPage extends Component {
     constructor(props) {
         super(props);
-        this.state = { table: true, symbol: this.random(10) };
+        this.state = { table: true, symbol: this.random(10), width: window.innerWidth, height: window.innerHeight };
         this.swTable = this.swTable.bind(this);
         this.symbols = ["©", "⌂", "Ꚛ", "#", "ჰ", "∆", "ჵ", "Წ", "Ѧ", "Ѱ"];
+
     }
     random(max) {
         return Math.floor(Math.random() * max);
     }
+
     swTable() {
         this.setState((prState) => {
             return prState.table
@@ -23,6 +26,7 @@ class SetPage extends Component {
     }
 
     render() {
+        console.log("SetPage:", this.props.event);
         return (
             <div>
                 <main>
@@ -31,7 +35,8 @@ class SetPage extends Component {
                         symbol={this.symbols[this.state.symbol]} />
                     <div className="table-place">
                         {(this.state.table) ?
-                            <GenTable symbol={this.state.symbol}
+                            <GenTable
+                                symbol={this.state.symbol}
                                 symbols={this.symbols}
                                 random={this.random}
                             /> :
@@ -40,8 +45,9 @@ class SetPage extends Component {
                                 symbols={this.symbols} />}
                     </div>
                 </main>
+                {/* {<Navs />} */}
             </div>
         );
     }
 }
-export default SetPage;
+export default SetPage; 

@@ -14,10 +14,10 @@ class Main extends React.Component {
             <div className="mainpage flex center" >
                 <div>
                     <Article content="Ця сторінка вгадує думки!" />
-                    <Article content="-Загадайте двузначне число. (напрриклад 68)" />
+                    <Article content="-Загадайте двузначне число. (наприклад 68)" />
                     <Article content="-Відніміть від нього цифри які його складають. (68 - 6 - 8 = 54)" />
                     <Article content="-Знайдить це число у таблиці, та запам'ятатйте символ поруч з ним." />
-                    <Article content="-Намалюйте цей символ у думках, та натисніть квадрат унизу." />
+                    <Article content="-Намалюйте цей символ у думках, та натисніть унизу." />
                     <div className="flex center">
                         <Button
                             state={this.props.state}

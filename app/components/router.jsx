@@ -8,13 +8,13 @@ import About from "./about.jsx";
 import Present from "./Present.jsx";
 
 function RouterApp(props) {
-
+    console.log("Router.JSX: ", props.event);
     return (
         <Router>
             <div>
 
                 <Routes>
-                    <Route path="/" element={<SetPage />} />
+                    <Route path="/" element={<SetPage event={props.event} />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/present" element={<Present />} />
                 </Routes>
