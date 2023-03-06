@@ -15,6 +15,7 @@ function RouterApp(props) {
 
                 <Routes>
                     <Route path="/" element={<SetPage event={props.event} />} />
+                    <Route path="/GuessThought" element={<SetPage event={props.event} />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/present" element={<Present />} />
                 </Routes>

@@ -10,7 +10,7 @@ function Navs(props) {
         <div className="flex center">
             <div className="flex link-container between">
                 <div>
-                    <NavLink to="/" className="link">Головна</NavLink>
+                    <NavLink to="/GuessThought" className="link">Головна</NavLink>
                     <NavLink to="/about" className="link">About</NavLink>
                 </div>
 
