@@ -1,6 +1,6 @@
 .flex {
     display: flex;
-    border: 1px solid #ccc;
+
 }
 
 .row {
@@ -17,4 +17,24 @@
 
 .start {
     justify-content: flex-start;
+}
+
+.center {
+    justify-content: center;
+}
+
+.end {
+    justify-self: end;
+}
+
+.start {
+    justify-content: start;
+}
+
+.left {
+    justify-content: left;
+}
+
+.right {
+    justify-content: right;
 }
