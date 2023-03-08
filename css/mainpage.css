@@ -5,3 +5,25 @@
     background-color: darkslategrey;
     /* height: 200px; */
 }
+
+.intro {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.example {
+    color: aquamarine;
+}
+
+.first-letter {
+    color: white;
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+.head-intro {
+    color: white;
+    font-weight: 900;
+    font-size: 1.2em;
+
+}

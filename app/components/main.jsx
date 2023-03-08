@@ -13,12 +13,27 @@ class Main extends React.Component {
         return (
             <div className="mainpage flex center" >
                 <div>
-                    {/* <Article content="Ця сторінка вгадує думки!" /> */}
-                    <div className="flex center"><b>Ця сторінка вгадує думки!</b></div>
-                    <Article content="-Загадайте двузначне число. (наприклад 68)" />
-                    <Article content="-Відніміть від нього цифри які його складають. (68 - 6 - 8 = 54)" />
-                    <Article content="-Знайдить це число у таблиці, та запам'ятайте символ поруч з ним." />
-                    <Article content="-Намалюйте цей символ у думках, та натисніть кнопку." />
+                    <div className="flex center">
+                        <span className="head-intro">Ця сторінка вгадує думки!</span>
+                    </div>
+                    <div>
+                        <div className="intro">
+                            -<span className="first-letter">З</span>агадайте двузначне число. <span className="example">
+                                (наприклад 68)
+                            </span>
+                        </div>
+                        <div className="intro">
+                            -<span className="first-letter">З</span>найдить це число у таблиці, та запам'ятайте символ поруч з ним.
+                        </div>
+                        <div className="intro">
+                            -<span className="first-letter">В</span>ідніміть від нього цифри які його складають.<span className="example">
+                                (68 - 6 - 8 = 54)
+                            </span>
+                        </div>
+                        <div className="intro">
+                            -<span className="first-letter">Н</span>амалюйте цей символ у думках, та натисніть кнопку.
+                        </div>
+                    </div>
                     <div className="flex center">
                         <Button
                             state={this.props.state}

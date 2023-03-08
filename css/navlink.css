@@ -22,7 +22,7 @@
 }
 
 .clock {
-    color: lightsalmon;
+    color: aquamarine;
     font-size: 1.3em;
     margin-top: 5px;
     background-color: #2f5f5f;
@@ -30,5 +30,5 @@
     width: 100px;
     text-align: center;
     border-radius: 15px;
-    border: 1px solid lightsalmon;
+    border: 1px solid aquamarine;
 }
