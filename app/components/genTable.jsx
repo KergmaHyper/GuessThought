@@ -5,9 +5,12 @@ import "../../css/table.css"
 
 function GenTable(props) {
     const base = 4 + props.random(5);
-    const colunm = 6;
-    const LenArray = 78;
-
+    let colunm = 6;
+    let LenArray = 78;
+    if (window.innerWidth > 480) {
+        colunm = 12;
+        LenArray = 84;
+    }
     const nums = Array.from({ length: LenArray }, (el, index) => index + base);
     return (
         <div className="mainpage flex center">

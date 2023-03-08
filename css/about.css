@@ -1,8 +1,19 @@
 .link-style a {
     color: aliceblue;
-
+    margin: 10px;
 }
 
 .link-style a:hover {
     color: aquamarine;
+}
+
+.head {
+    color: antiquewhite;
+}
+
+.article {
+    color: aquamarine;
+    font-size: 1.5em;
+    width: 380px;
+    text-align: left;
 }

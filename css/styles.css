@@ -27,7 +27,7 @@ main {
 
 
 .symbol-answer {
-    font-size: 300px;
+    font-size: 150px;
     color: greenyellow;
 }
 
@@ -48,5 +48,9 @@ main {
 
     main {
         font-size: 1.3em;
+    }
+
+    .symbol-answer {
+        font-size: 180px;
     }
 }
