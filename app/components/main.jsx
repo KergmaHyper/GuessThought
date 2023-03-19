@@ -23,12 +23,13 @@ class Main extends React.Component {
                             </span>
                         </div>
                         <div className="intro">
-                            -<span className="first-letter">З</span>найдить це число у таблиці, та запам'ятайте символ поруч з ним.
-                        </div>
-                        <div className="intro">
                             -<span className="first-letter">В</span>ідніміть від нього цифри які його складають.<span className="example">
                                 (68 - 6 - 8 = 54)
                             </span>
+                        </div>
+
+                        <div className="intro">
+                            -<span className="first-letter">З</span>найдить отримане число у таблиці, та запам'ятайте символ поруч з ним.
                         </div>
                         <div className="intro">
                             -<span className="first-letter">Н</span>амалюйте цей символ у думках, та натисніть кнопку.
