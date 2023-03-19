@@ -8,14 +8,11 @@ function Clock() {
         timerID = setInterval(() => {
             setClock((prevClock) => {
                 let newClock = new Date().toLocaleTimeString();
-                // console.log("Clock: ", newClock, "timerID: ", timerID);
                 return newClock;
             });
         }, 1000);
-        console.log("Timer created: ", timerID);
         return () => {
             clearInterval(timerID);
-            console.log("timer cleared. timedID: ", timerID);
         };
 
     }, []);

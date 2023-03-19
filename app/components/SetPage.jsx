@@ -1,48 +1,53 @@
 import React, { Component } from "react";
-import Header from "./header.jsx";
-import Footer from "./footer.jsx";
 import Main from "./main.jsx";
 import "../../css/styles.css";
+import GenTable from "./genTable.jsx";
+import TryAgain from "./tryAgain.jsx";
+
 
 class SetPage extends Component {
     constructor(props) {
         super(props);
-        this.state = { screen: this.props.screen, lang: this.props.lang };
-        this.setStateSTART = this.setStateSTART.bind(this);
-        this.setStateTABLE = this.setStateTABLE.bind(this);
-        this.setStateABOUT = this.setStateABOUT.bind(this);
-        this.swLang = this.swLang.bind(this);
+        this.state = { table: true, symbol: this.random(10), width: window.innerWidth, height: window.innerHeight };
+        this.swTable = this.swTable.bind(this);
+        this.symbols = ["©", "⌂", "Ꚛ", "#", "ჰ", "∆", "ჵ", "Წ", "Ѧ", "Ѱ"];
+
     }
-    setStateTABLE() {
-        this.setState({ screen: "table" });
+    random(max) {
+        return Math.floor(Math.random() * max);
     }
-    setStateSTART() {
-        this.setState({ screen: "start" });
-    }
-    setStateABOUT() {
-        this.setState({ screen: "about" });
-    }
-    swLang() {
-        (this.state.lang === "ukr") ?
-            this.setState({ lang: "eng" }) :
-            this.setState({ lang: "ukr" });
-        return this.state.lang;
+
+    swTable() {
+        this.setState((prState) => {
+            return prState.table
+                ? { table: !prState.table }
+                : { symbol: this.random(10), table: !prState.table };
+        })
     }
 
     render() {
+        console.log("SetPage:", this.props.event);
         return (
             <div>
-                <header>
-                    <Header call={this} lang={this.state.lang} />
-                </header>
                 <main>
-                    <Main state={this.state.screen} lang={this.state.lang} />
+                    <Main onClick={this.swTable}
+                        state={this.state.table}
+                        symbol={this.symbols[this.state.symbol]} />
+                    <div className="table-place">
+                        {(this.state.table) ?
+                            <GenTable
+                                symbol={this.state.symbol}
+                                symbols={this.symbols}
+                                random={this.random}
+                            /> :
+                            <TryAgain
+                                symbol={this.state.symbol}
+                                symbols={this.symbols} />}
+                    </div>
                 </main>
-                <footer>
-                    <Footer lang={this.state.lang} />
-                </footer>
+                {/* {<Navs />} */}
             </div>
         );
     }
 }
-export default SetPage;
+export default SetPage; 
